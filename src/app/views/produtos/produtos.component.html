@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<app-menu></app-menu>
+
+<div class="card-top container-fluid">
+  
+  
+  <div class="container d-flex">
+    <div class="item">
+     <a (click)="filter('')">
+      <img src="assets\Todos.png" alt="">
+      <h6>Todos Produtos</h6>
+     </a>
+    </div>
+
+    <div class="item">
+      <a (click)="filter('Compressores')">
+        <img src="assets\compressor.png" alt="">
+        <h6>Compressores</h6>
+       </a>
+    </div>
+
+    <div class="item">
+      <a (click)="filter('Materiais elétricos')">
+        <img src="assets\materias_eletricos.png" alt="">
+        <h6>Materiais Elétricos</h6>
+       </a>
+    </div>
+
+    <div class="item">
+      <a (click)="filter('Motores elétricos')">
+        <img src="assets\motor.png" alt="">
+        <h6>Motores Elétrico</h6>
+       </a>
+    </div>
+
+    <div class="search-box">
+      <button class="btn-search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </button>
+      <input type="text" class="input-search" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Type to Search..."/>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- PRODUTOS -->
+
+<div class="container produto">
+  <div class="row">
+    <ng-container *ngFor="let produto of filterCategory | filter:searchKey:'name'" >
+     
+        <div class="card col-md-4">
+          <div class="image-product">
+            <img src="{{produto.urlArquivo}}">
+          </div>
+          <div class="title" >
+            <h1  style="overflow: hidden;text-overflow: ellipsis;max-width: 220px;white-space: nowrap;">{{produto.name}}</h1>
+          </div>
+          <div class="description">
+            <span style="overflow: hidden;text-overflow: ellipsis;max-width: 200px;white-space: nowrap;">{{produto.description}}</span>
+          </div>
+          <div class="price-product">
+            <h1>R$ {{produto.price}}</h1>
+        </div>
+  
+        <button class="cssbuttons-io-button" (click)="abrirProduto(produto)"> Ver Mais
+         
+        </button>
+      </div>
+      
+      
+    </ng-container>
+      
+      
+   
+      
+ 
+ 
+</div>
+</div>

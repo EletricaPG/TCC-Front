@@ -1,0 +1,41 @@
+.container img{
+    height: 100px;
+    position: relative;
+    top: 120px;
+    left: 40%;
+}
+
+.features {
+    position: relative;
+    top: 50%;
+}
+
+.container h1 {
+    margin-top: 25%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container button {
+    border: none;
+    background: #021F47;
+    padding: 6px;
+    border-radius: 5px;
+    color: yellow;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}

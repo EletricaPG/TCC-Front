@@ -1,0 +1,37 @@
+<body>
+    <section class="area-login">
+  
+    <div class="login">
+      <div>
+        <a ><img src="assets/logo.png" alt="LOGO">
+        </a>
+      </div>
+      <form method="POST" [formGroup]="cadastroForm" (ngSubmit)="signUp()">
+
+        <input formControlName="name" type="text" name="nome" placeholder="Nome do usuario" autofocus>
+        <span class="text-danger" *ngIf="cadastroForm.controls['name'].dirty && cadastroForm.hasError('required','name')">*Nome usuário é obrigatório</span>
+
+        <input formControlName="cpf" type="text" name="cpf" placeholder="CPF" mask="00.000.000/0000-00">
+        <span class="text-danger" *ngIf="cadastroForm.controls['cpf'].dirty && cadastroForm.hasError('required','cpf')">*CPF é obrigatório</span>
+
+        <input formControlName="aniv" type="date" name="data" placeholder="Nascimento">
+        <span class="text-danger" *ngIf="cadastroForm.controls['aniv'].dirty && cadastroForm.hasError('required','aniv')">*Nascimento é obrigatório</span>
+
+        <input formControlName="phone" type="text" name="phone" placeholder="Telefone" mask="(00) 0 0000-0000">
+        <span class="text-danger" *ngIf="cadastroForm.controls['phone'].dirty && cadastroForm.hasError('required','phone')">*Telefone é obrigatório</span>
+
+        <input formControlName="email" type="email" name="email" placeholder="E-mail" ngModel email>
+        <span class="text-danger" *ngIf="cadastroForm.controls['email'].dirty  && cadastroForm.hasError('required','email')">*E-mail é obrigatório</span>
+
+        <input formControlName="password" type="password" name="senha" placeholder="Senha">
+        <span class="text-danger" *ngIf="cadastroForm.controls['password'].dirty && cadastroForm.hasError('required','password')">*Senha é obrigatório</span>
+        
+<br>
+        <input [disabled]="!cadastroForm.valid" type="submit" value="ENTRAR">
+
+      </form>
+  
+             <a href="home"> Voltar </a>
+    </div>
+  </section>
+  </body>

@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<app-menu></app-menu> <br>
+
+<!--Carrinho Vazio-->
+
+<ng-container *ngIf="produtos.length ==0">
+   
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title"><i class="fa fa-bolt" aria-hidden="true"></i> Meu Carrinho <i class="fa fa-bolt" aria-hidden="true"></i></h5>
+            
+        </div>
+        <div class="center">
+            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            <h4>Seu carrinho está vazio!</h4>
+            <h6>Adicione um produto agora</h6><br>
+            <button routerLink="/produtos" class="btn">Compre Agora</button>
+        </div>
+    </div>
+</ng-container>
+
+
+<!--Carrinho cheio-->
+
+<ng-container *ngIf="produtos.length !=0">
+    
+   <div class="container">
+    <div class="card-table">
+        <div class="cart-product">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Marca</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                 
+               
+                <tbody >
+                    <tr *ngFor="let item of produtos">
+                        <td><img src="{{item.urlArquivo}}" alt=""></td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.price}}</td>
+                        <td>{{item.idSupplier}}</td>
+                        <td>
+                            <button  class="btn" (click)="remover(item)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"></td>
+                        <td><a class="compra btn-sucess"  href="finalizada">Comprar</a></td>
+                        <td><strong>Total: R${{totalGeral}}</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+   </div>
+</ng-container>
+
+

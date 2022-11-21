@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+   padding: 15px;
+    width: 100%;
+    margin: auto;
+}
+
+/*Carrinho vazio*/
+
+.card{
+    border:none;
+    padding: 15px;
+}
+
+.card h5{
+    color:#021F47;
+}
+
+.card h5 i{
+    color: #FFCD05;
+    font-size: 25px;
+}
+
+.center{
+    background: #021F47;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 60%;
+    height: 35%;
+    color:#fff;
+    border-radius: 25px;
+    padding: 15px;
+}
+
+.center i{
+    font-size: 495%;
+    color:#FFCD05;
+}
+
+.center .btn{
+    background: #FFCD05;
+    color:#021F47;
+    font-weight: 500;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.center .btn:hover{
+    background: #FFCD05;
+    color:#fff;
+}
+
+/*Carrinho Cheio*/
+
+.card-table{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    word-wrap: break-word;
+    background-color: #021F47;
+    background-clip: border-box;
+    border: 2px solid #FFCD05;
+    border-radius: 25px;
+    color:white;
+    
+}
+th {
+    width: 20%;
+    color: #fff;
+    border-color: #FFCD05;
+}
+
+td{
+    padding-top: 45px;
+    color: #fff;
+    font-weight: 500;
+}
+
+td img{
+    width: 55%;
+    height: 75%;
+    border-radius: 50%;
+    margin-top: -35px;
+}
+
+td button{
+    background: transparent;
+    border: none;
+}
+
+td button i{
+    color: #FFCD05;
+    font-size: 18px;
+}
+
+td .btn{
+    background: transparent;
+}
+
+td .btn i{
+    color:rgb(236, 30, 30);
+    font-size: 25px;
+}
+
+td .compra{
+    background: #FFCD05;
+    color:#021F47;
+    font-weight: 500;
+    border-radius: 7px;
+    padding: 5px;
+    text-decoration: none;
+}
+

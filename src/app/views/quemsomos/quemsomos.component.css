@@ -1,0 +1,58 @@
+
+
+                                    /*Pagina */
+#pagina{
+display: flex;
+color: #FFCD05;
+}
+
+#h22{
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size: 55px;
+margin:   0px;
+padding: 00;
+}
+
+
+ p{
+font-size: 20px;
+padding:15;
+color: black;
+margin-top: 7rem;
+line-height: 25px;
+margin-left: 90px;
+margin-right: 90px;
+text-align: center;
+ }
+
+ h1{
+ margin: 50px;
+ font-size: 30px;
+ margin: 20px;
+ color: #021F47;
+ font-family: impact;
+ }
+
+.imagen02{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+#mapa{
+  display: flex;
+  margin-right: 120px;
+  margin-top: 3em;
+  border-radius: 10%;
+}
+
+
+
+
+                                                    /*fomulario */
+
+.formulario {
+  display: flex;
+  margin-left: 1em;
+  margin-top: 4em;
+}

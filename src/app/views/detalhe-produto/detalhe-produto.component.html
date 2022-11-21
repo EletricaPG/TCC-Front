@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<app-menu></app-menu> <br>
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-6"><img class="product" src="{{produto.urlArquivo}}"width="80%" /></div>
+      <div class="col-md-6">
+        <div class="row mb-4"><h1 class="name">{{produto.name}}</h1></div>
+        <div class="row mb-4"><h3 class="desc">
+          {{produto.description}}
+        </h3></div>
+        <div class="row mb-4"><h1 class="fornc">Marca: {{produto.idSupplier}}</h1></div>
+        <div class="row mb-4"><h1 class="price">R$ {{produto.price}}</h1></div>
+        <div class="row mb-4">
+          <button class="cssbuttons-io-button btn-lg" (click)="comprar(produto)"> Comprar
+            <div class="icon">
+              <img src="assets/compras.png" width="20px">
+            </div>
+          </button>
+        </div>
+        
+      </div>
+    </div>
+  </div>

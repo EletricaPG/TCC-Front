@@ -1,0 +1,28 @@
+header{
+    display: flex;
+    flex-direction: row; /*o menu vira uma linha*/
+    justify-content: space-between;
+    align-items: center;
+    background-color: #021F47;
+    color:white;
+    width: 100%;
+   
+  }
+  
+  
+  
+  .logo{
+    width: 75%;
+    height: 100%;
+  }
+  
+  
+  .carrinho{
+    font-size: 35px;
+    color:#FFCD05;
+  
+  }
+  
+  .carrinho:hover{
+    color:#ffff;
+  }

@@ -1,0 +1,25 @@
+
+<body>
+  <section class="area-login">
+
+  <div class="login">
+    <div>
+       <a href="home"><img src="assets/raio.png" alt="LOGO">
+       </a>
+    </div>
+          <form method="POST" [formGroup]="loginForm" (ngSubmit)="entrar()">
+
+            <input formControlName="name" type="text" name="none" placeholder="Nome do usuario" autofocus>
+            <span class="text-danger" *ngIf="loginForm.controls['name'].dirty  && loginForm.hasError('required','name')">*Nome usuário é obrigatório</span>
+
+            <input formControlName="password" type="password" name="senha" placeholder="Senha">
+            <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Senha é obrigatório</span>
+            <span class="text-danger"  *ngIf="erroDados">*Dados inválidos</span>
+<br>
+            <input [disabled]="!loginForm.valid" type="submit" value="ENTRAR">
+
+          </form>
+             <p>Ainda não tem uma conta? <a href="cadastro">Criar conta</a></p>
+  </div>
+</section>
+</body>
